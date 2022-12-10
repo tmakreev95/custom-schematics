@@ -1,0 +1,17 @@
+{
+  "$schema": "../../../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "ng-add": {
+      "description": "Add Custom Ui library to the project.",
+      "factory": "./ng-add/index#ngAdd"
+    },
+    "custom-schematics-ui-component": {
+      "description": "This schematics generates custom Custom-Ui component to the project.",
+      "factory": "./custom-schematics-ui-component/index#customUiComponentGenerator",
+      "schema": "./custom-schematics-ui-component/schema.json",
+      "aliases": [
+        "cuic"
+      ]
+    }
+  }
+}

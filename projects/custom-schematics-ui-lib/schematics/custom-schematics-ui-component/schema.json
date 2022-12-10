@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "custom-schematics-ui-component",
+  "title": "Custom Ui Component Schema",
+  "type": "object",
+  "description": "Generates custom Custom Ui Component",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the component",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "Name of the component: "
+    },
+    "path": {
+      "type": "string",
+      "description": "Where should be created the component",
+      "format": "path",      
+      "default": "src/app",
+      "x-prompt": "Path of the component: "
+    }
+  },
+  "required": [
+    "name",
+    "path"
+  ]
+}
